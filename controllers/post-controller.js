@@ -44,7 +44,7 @@ const PostController = {
       // проверяем полученные посты и проверяем пользователя поставил ли он лайк посту
       const postWithLikeInfo = posts.map((post) => ({
         ...post,
-        likeByUser: post.likes.some((like) => like.userId === userId),
+        likedByUser: post.likes.some((like) => like.userId === userId),
       }));
 
       res.json(postWithLikeInfo);
